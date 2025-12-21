@@ -1,6 +1,5 @@
 backend:
   name: github
-  repo: nellydundy/Mi-vida-mi-ritmo
   branch: main
 
 media_folder: "assets"
