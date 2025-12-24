@@ -1,6 +1,8 @@
 backend:
-  52ipgb4Kzi2xSGxXwMLxcqlsdopHsAHN
-  dev-ngm5ua3f4cw12s2w.us.auth0.com
+  backend:
+  name: auth0
+  auth0_app_id: 52ipgb4Kzi2xSGxXwMLxcqlsdopHsAHN
+  auth0_domain: dev-ngm5ua3f4cw12s2w.us.auth0.com
   
   name: git-gateway
   repo: nellydundy/mi-vida-mi-ritmo
