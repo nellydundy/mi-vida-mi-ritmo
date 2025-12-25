@@ -14,7 +14,7 @@
 
     <!-- Redirección correcta después de login -->
     <script>
-      if (window.netlifyIdentity) {
+    if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
@@ -23,6 +23,18 @@
           }
         });
       }
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      const hash = window.location.hash;
+      if (hash && hash.includes("recovery_token")) {
+        window.netlifyIdentity.open("recovery");
+      }
+      if (hash && hash.includes("invite_token")) {
+        window.netlifyIdentity.open("signup");
+      }
+    });
+  }
+      
     </script>
   </body>
 </html>
