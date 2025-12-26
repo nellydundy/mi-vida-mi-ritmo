@@ -5,6 +5,25 @@
     <title>Panel de Administración</title>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      const hash = window.location.hash;
+
+      if (hash.includes("invite_token")) {
+        window.netlifyIdentity.open("signup");
+      }
+
+      if (hash.includes("recovery_token")) {
+        window.netlifyIdentity.open("recovery"); // esto permite abrir recovery desde el link
+      }
+    });
+  }
+  </script>
+  
+  
+  
+  
   </body>
 </html>
