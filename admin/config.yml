@@ -1,22 +1,16 @@
 backend:
-  name: github
-  repo: nellydundy/mi-vida-mi-ritmo
-  branch: main
-  auth_type: pkce
-  base_url: https://auth.decapcms.org
-  site_url: https://mi-vida-mi-ritmo.netlify.app
-  client_id: Ov23liLRKYy1eKbhM2UC       
-  client_secret: c87527fbd354475cfe2ce3f8f62d9c86641311d0    
+  name: git-gateway      # usa Git Gateway para conectar con tu repo
+  branch: main           # rama principal de tu repositorio
 
-media_folder: "static/img"            
-public_folder: "/img"                 
+media_folder: "static/img"   # carpeta local para subir imágenes
+public_folder: "/img"        # ruta pública para imágenes
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"           
-    create: true                        
-    slug: "{{slug}}"                   
+    folder: "content/posts"  # donde se guardan los archivos markdown
+    create: true             # permite crear nuevos posts desde CMS
+    slug: "{{slug}}"         # nombre automático del archivo basado en el título
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
