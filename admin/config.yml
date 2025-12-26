@@ -5,16 +5,18 @@ backend:
   auth_type: pkce
   base_url: https://auth.decapcms.org
   site_url: https://mi-vida-mi-ritmo.netlify.app
+  client_id: Ov23liLRKYy1eKbhM2UC       
+  client_secret: c87527fbd354475cfe2ce3f8f62d9c86641311d0    
 
-media_folder: "static/img"             # carpeta local para imágenes
-public_folder: "/img"                  # ruta pública de imágenes en la web
+media_folder: "static/img"            
+public_folder: "/img"                 
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"            # carpeta donde se guardan los archivos Markdown
-    create: true                        # permite crear nuevos posts desde el CMS
-    slug: "{{slug}}"                    # nombre automático del archivo basado en el título
+    folder: "content/posts"           
+    create: true                        
+    slug: "{{slug}}"                   
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
