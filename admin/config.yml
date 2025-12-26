@@ -1,17 +1,18 @@
 backend:
   name: github
-  repo: nellydundy/mi-vida-mi-ritmo
-  branch: main
+  repo: nellydundy/mi-vida-mi-ritmo   # tu repo en GitHub
+  branch: main                         # asegúrate de que tu rama principal se llama main
+  auth_type: implicit                   # login gratuito con GitHub
 
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "static/img"             # carpeta local para imágenes
+public_folder: "/img"                  # ruta pública de imágenes en la web
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"
-    create: true
-    slug: "{{slug}}"
+    folder: "content/posts"            # carpeta donde se guardan los archivos Markdown
+    create: true                        # permite crear nuevos posts desde el CMS
+    slug: "{{slug}}"                    # nombre automático del archivo basado en el título
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
